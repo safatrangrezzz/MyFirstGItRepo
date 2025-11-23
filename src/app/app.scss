@@ -1,0 +1,69 @@
+.outer{
+  margin: auto;
+  margin-top: 50px;
+    border: 1px solid rgb(102, 102, 102);
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  button{
+    padding: 7px;
+
+}
+}
+
+.dlg-box{
+    width: 40vw;
+    border: 1px solid rgb(127, 127, 127);
+    position: absolute;
+    top:30px;
+    background: #f225251f;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    h1{
+      text-align: center;
+      margin: 10px 0px;
+    }
+}
+
+
+
+.form-container {
+   background: #ffaaaa69;
+    backdrop-filter: blur(5px);
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px 0px;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1.2rem;
+
+}
+.btn-area{
+  button{
+    margin: 5px 10px;
+  }
+}
