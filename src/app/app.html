@@ -1,4 +1,4 @@
-<div class= "outer">
+<!-- <div class= "outer">
   <button (click)="toggle()">Add Task</button>
      @if(dlgbox){
       <div class="dlg-box">
@@ -12,7 +12,7 @@
       <input type="number" (change)="setnum(val.value)" #val>
 
       <label>End Time:</label>
-      <input type="time" [value]="time">
+      <input type="time" [(ngModel)]="realtimea">
         </form>
     </div>
         <div class="btn-area">
@@ -25,4 +25,7 @@
 
 <div class="task-list-container">
 
-</div>
+</div> -->
+ <input type="number" (change)="add(val.value)" #val>
+<input type="time" [(ngModel)]=" realtime">
+<button>dsdsdsdsdjhjhjd</button>
