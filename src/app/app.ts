@@ -10,20 +10,46 @@ import { FormsModule } from '@angular/forms';
 })
 export class App {
   livetime = new Date()
-  realtime:any= ''
-
+  
   hours = this.livetime.getHours()
   min = this.livetime.getMinutes()
   sec =  this.livetime.getSeconds()
+  sthours :string = this.hours.toString().padStart(2,'0')
+  stmin :string = this.min.toString().padStart(2,'0')
+  stsec :string = this.sec.toString().padStart(2,'0')
+  temp:any =''
+  
+  // constructor(){
+  //   console.log(this.sthours,this.stmin,this.stsec)
+  //   this.realtime= 
+  //   // console.log(typeof this.hours,typeof this.min,typeof this.sec)
+  // }
+  realtime:any=this.sthours+':'+this.stmin+':'+this.stsec
+
   add(val:any){
     console.log(this.hours, 'and', this.min,'and', this.sec )
-    console.log(this.hours +':'+ this.min )
-    let no = Number(this.hours) + Number(val)
-    const vale = no +':'+ this.min
+    console.log(this.hours +':'+ this.min)
+     this.temp = Number(this.sthours) + Number(val)
+    console.log(this.temp,"tempkivl")
+    if(this.temp > 24){
+     this.temp = '1'.padStart(2,'0');
+     console.log('temp ki val 24 se badi hai', typeof this.temp , this.temp)
+        
+      this.realtime = this.temp+':'+this.stmin+':'+this.stsec
+      
+      console.log(this.realtime)
+    }
+    else{
+      
+      this.realtime =  this.temp+':'+this.stmin+':'+this.stsec
+      console.log(this.realtime,'ELSE' )
+    }
     
-    this.realtime = vale
+    // this.realtime = vale
+
+
   }
-  
+   
 
 
 
